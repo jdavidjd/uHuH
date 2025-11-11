@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LlaveColgante™ | Elegancia que abre puertas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #d4af37;
+      --silver: #e5e5e5;
+      --dark: #1a1a1a;
+      --light: #f8f8f8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+    .container { max-width: 1100px; margin: auto; padding: 0 20px; }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.2rem;
+      margin-bottom: 12px;
+      background: linear-gradient(to right, var(--gold), #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p { font-size: 1.25rem; opacity: 0.9; }
+
+    /* Product Section */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 60px 0;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-bottom: 3px solid var(--gold);
+    }
+    .card-content {
+      padding: 25px;
+    }
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: var(--dark);
+    }
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin: 12px 0;
+    }
+    .old-price {
+      color: #999;
+      text-decoration: line-through;
+      font-size: 1.1rem;
+      margin-left: 8px;
+    }
+    .badge {
+      display: inline-block;
+      background: #e91e63;
+      color: white;
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    .btn {
+      background: var(--dark);
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+    .btn:hover {
+      background: var(--gold);
+      color: var(--dark);
+      transform: scale(1.03);
+    }
+    .features {
+      text-align: left;
+      margin: 20px 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .features li {
+      margin: 8px 0;
+      position: relative;
+      padding-left: 25px;
+    }
+    .features li::before {
+      content: '✓';
+      color: var(--gold);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #ccc;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.4rem; }
+      .product-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>LlaveColgante™</h1>
+      <p>Lleva la elegancia en tu bolsillo con este llavero-colgante en acero inoxidable 316L con acabado plateado pulido o baño dorado premium. Diseño minimalista, ultraligero y resistente al agua, sudor y roces diarios.</p>
+    </div>
+  </header>
+
+  <!-- Product Options -->
+  <div class="container">
+    <div class="product-grid">
+
+      <!-- Opción 1: 1 Unidad -->
+      <div class="card">
+        <img src="https://via.placeholder.com/600x500/d4af37/ffffff?text=LLAVE+DORADO" alt="Llavero Dorado">
+        <div class="card-content">
+          <h3>1 Unidad</h3>
+          <p>Elige tu color: <strong>Plateado o Dorado</strong></p>
+          <div class="price">$50</div>
+          <ul class="features">
+            <li>Acero quirúrgico 316L: No se oxida, no irrita la piel</li>
+            <li>Diseño elegante y ligero</li>
+            <li>Envío directo desde fábrica: Llega en 15-20 días hábiles</li>
+            <li>Garantía de 60 días</li>
+          </ul>
+          <button class="btn" onclick="addToCart('1 Unidad', 50)">Comprar Ahora</button>
+        </div>
+      </div>
+
+      <!-- Opción 2: Pack x3 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/600x500/e5e5e5/1a1a1a?text=PACK+x3" alt="Pack x3 Llaveros">
+        <div class="card-content">
+          <h3>Pack x3</h3>
+          <p>1 Plateado + 2 Dorado (o al revés)</p>
+          <div class="price">$99 <span class="old-price">$150</span></div>
+          <div class="badge">¡AHORRA $51!</div>
+          <ul class="features">
+            <li>Ideal para regalar o variedad</li>
+            <li>Envío directo + caja de regalo</li>
+            <li>Llega en 15-20 días hábiles</li>
+            <li>Garantía de satisfacción</li>
+          </ul>
+          <button class="btn" onclick="addToCart('Pack x3', 99)">Comprar Pack</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 LlaveColgante™ | Envío desde fábrica internacional</p>
+      <p><a href="#">Términos</a> • <a href="#">Privacidad</a> • <a href="#">Contacto</a></p>
+    </div>
+  </footer>
+
+  <!-- Carrito Simple -->
+  <script>
+    function addToCart(product, price) {
+      let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      cart.push({ product, price, date: new Date().toLocaleString() });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`¡${product} agregado al carrito! 💸\n\nSiguiente: Ve a WhatsApp para confirmar pedido.`);
+    }
+
+    window.onload = () => {
+      let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      if (cart.length > 0) {
+        document.body.insertAdjacentHTML('afterbegin', 
+          `<div style="position:fixed;top:20px;right:20px;background:var(--gold);color:var(--dark);padding:10px 15px;border-radius:50px;font-weight:bold;z-index:999;">
+            🛒 ${cart.length}
+           </div>`
+        );
+      }
+    };
+  </script>
+
+</body>
+</html>
